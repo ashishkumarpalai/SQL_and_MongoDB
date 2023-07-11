@@ -139,6 +139,9 @@ db.Restaurants.find({
 
 
 ```
+db.Restaurants.aggregate([
+  { $group: { _id: null, average_rating: { $avg: "$average_rating" } } }
+]);
 
 ```
 **Problem 24:**

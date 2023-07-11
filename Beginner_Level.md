@@ -91,12 +91,12 @@ db.createCollection("Customers")
 
 ```
 db.Customers.insertMany([
-  { name: "John Doe", email: "john@example.com", address: "123 Main St", phone_number: "123-456-7890" },
-  { name: "Jane Smith", email: "jane@example.com", address: "456 Elm St", phone_number: "987-654-3210" },
-  { name: "Alice Johnson", email: "alice@example.com", address: "789 Oak St", phone_number: "555-555-5555" },
-  { name: "Bob Williams", email: "bob@example.com", address: "321 Pine St", phone_number: "999-888-7777" },
-  { name: "Eva Davis", email: "eva@example.com", address: "777 Walnut St", phone_number: "111-222-3333" }
-])
+    { id: 1, name: 'John Doe', email: 'john@example.com', address: '123 Main St', phone_number: '1234567890' },
+    { id: 2, name: 'Jane Smith', email: 'jane@example.com', address: '456 Oak Ave', phone_number: '9876543210' },
+    { id: 3, name: 'Alice Johnson', email: 'alice@example.com', address: '789 Elm Rd', phone_number: '4561237890' },
+    { id: 4, name: 'Bob Williams', email: 'bob@example.com', address: '321 Pine Ln', phone_number: '7890123456' },
+    { id: 5, name: 'Sarah Davis', email: 'sarah@example.com', address: '567 Maple Dr', phone_number: '5432109876' }
+]);
 ```
 
 **Problem 3:**

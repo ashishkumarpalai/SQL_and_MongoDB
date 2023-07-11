@@ -250,77 +250,159 @@ CREATE TABLE Customers (
 
 **phone_number**: This field holds the customer's phone number as a variable character string (VARCHAR) of length 50.
 
+### create database
+
+```
+CREATE DATABASE giapratice 
+
+```
+### used databse
+
+```
+use databasename
+```
+
 **Problem 1:**
 
 - **Prerequisite**: Understand creating tables in SQL / collections in MongoDB
 - **Problem**: Create a **`Customers`** table / collection with the following fields: **`id`** (unique identifier), **`name`**, **`email`**, **`address`**, and **`phone_number`**.
+
+```
+
+CREATE TABLE Customers (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    address VARCHAR(255),
+    phone_number VARCHAR(50)
+);
+
+```
 
 **Problem 2:**
 
 - **Prerequisite**: Understand inserting data into SQL tables / MongoDB collections
 - **Problem**: Insert five rows / documents into the **`Customers`** table / collection with data of your choice.
 
+```
+INSERT INTO Customers (id, name, email, address, phone_number)
+VALUES (1, 'John Doe', 'john@example.com', '123 Main St', '1234567890'),
+       (2, 'Jane Smith', 'jane@example.com', '456 Oak Ave', '9876543210'),
+       (3, 'Alice Johnson', 'alice@example.com', '789 Elm Rd', '4561237890'),
+       (4, 'Bob Williams', 'bob@example.com', '321 Pine Ln', '7890123456'),
+       (5, 'Sarah Davis', 'sarah@example.com', '567 Maple Dr', '5432109876');
+
+```
 **Problem 3:**
 
 - **Prerequisite**: Understand basic data fetching in SQL / MongoDB
 - **Problem**: Write a query to fetch all data from the **`Customers`** table / collection.
+
+```
+SELECT * FROM Customers;
+```
 
 **Problem 4:**
 
 - **Prerequisite**: Understand how to select specific fields in SQL / MongoDB
 - **Problem**: Write a query to select only the **`name`** and **`email`** fields for all customers.
 
+
+```
+SELECT name, email FROM Customers;
+```
 **Problem 5:**
 
 - **Prerequisite**: Understand basic WHERE clause in SQL / MongoDB's find method
 - **Problem**: Write a query to fetch the customer with the **`id`** of 3.
 
+
+```
+SELECT * FROM Customers WHERE id = 3;
+```
 **Problem 6:**
 
 - **Prerequisite**: Understand using string patterns in SQL (LIKE clause) / using regex in MongoDB
 - **Problem**: Write a query to fetch all customers whose **`name`** starts with 'A'.
 
+
+```
+SELECT * FROM Customers WHERE name LIKE 'A%';
+```
 **Problem 7:**
 
 - **Prerequisite**: Understand how to order data in SQL / MongoDB
 - **Problem**: Write a query to fetch all customers, ordered by **`name`** in descending order.
 
+
+```
+SELECT * FROM Customers ORDER BY name DESC;
+```
 **Problem 8:**
 
 - **Prerequisite**: Understand data updating in SQL / MongoDB
 - **Problem**: Write a query to update the **`address`** of the customer with **`id`** 4.
 
+
+```
+UPDATE Customers SET address = 'New Address' WHERE id = 4;
+```
 **Problem 9:**
 
 - **Prerequisite**: Understand how to limit results in SQL / MongoDB
 - **Problem**: Write a query to fetch the top 3 customers when ordered by **`id`** in ascending order.
 
+
+```
+SELECT * FROM Customers ORDER BY id ASC LIMIT 3;
+```
 **Problem 10:**
 
 - **Prerequisite**: Understand data deletion in SQL / MongoDB
 - **Problem**: Write a query to delete the customer with **`id`** 2.
 
+```
+DELETE FROM Customers WHERE id = 2;
+```
 **Problem 11:**
 
 - **Prerequisite**: Understand how to count rows / documents in SQL / MongoDB
 - **Problem**: Write a query to count the number of customers.
 
+
+```
+SELECT COUNT(*) FROM Customers;
+
+```
 **Problem 12:**
 
 - **Prerequisite**: Understand how to skip rows / documents in SQL / MongoDB
 - **Problem**: Write a query to fetch all customers except the first two when ordered by **`id`** in ascending order.
 
+```
+SELECT * FROM Customers ORDER BY id ASC LIMIT 18446744073709551615 OFFSET 2;
+```
 **Problem 13:**
 
 - **Prerequisite**: Understand filtering with multiple conditions in SQL / MongoDB
 - **Problem**: Write a query to fetch all customers whose **`id`** is greater than 2 and **`name`** starts with 'B'.
 
+```
+SELECT * FROM Customers WHERE id > 2 AND name LIKE 'B%';
+```
 **Problem 14:**
 
 - **Prerequisite**: Understand how to use OR conditions in SQL / MongoDB
 - **Problem**: Write a query to fetch all customers whose **`id`** is less than 3 or **`name`** ends with 's'.
 
+```
+SELECT * FROM Customers WHERE id < 3 OR name LIKE '%s';
+```
 **Problem 15:**
 
 - **Prerequisite**: Understand how to use NULL checks in SQL / MongoDB
 - **Problem**: Write a query to fetch all customers where the **`phone_number`** field is not set or is null.
+
+```
+SELECT * FROM Customers WHERE phone_number IS NULL OR phone_number = '';
+```

@@ -77,7 +77,7 @@ db.collection_name.deleteOne({ key: value })
 
 **Problem 1:**
 
-- **Prerequisite**: Understand creating tables in SQL / collections in MongoDB
+- **Prerequisite**:  collections in MongoDB
 - **Problem**: Create a **`Customers`** table / collection with the following fields: **`id`** (unique identifier), **`name`**, **`email`**, **`address`**, and **`phone_number`**.
 ```
 db.createCollection("Customers")
@@ -86,7 +86,7 @@ db.createCollection("Customers")
 
 **Problem 2:**
 
-- **Prerequisite**: Understand inserting data into SQL tables / MongoDB collections
+- **Prerequisite**:  MongoDB collections
 - **Problem**: Insert five rows / documents into the **`Customers`** table / collection with data of your choice.
 
 ```
@@ -101,7 +101,7 @@ db.Customers.insertMany([
 
 **Problem 3:**
 
-- **Prerequisite**: Understand basic data fetching in SQL / MongoDB
+- **Prerequisite**: Understand basic data fetching  MongoDB
 - **Problem**: Write a query to fetch all data from the **`Customers`** table / collection.
 
 ```
@@ -110,7 +110,7 @@ db.Customers.find()
 ```
 **Problem 4:**
 
-- **Prerequisite**: Understand how to select specific fields in SQL / MongoDB
+- **Prerequisite**: Understand how to select specific fields in  MongoDB
 - **Problem**: Write a query to select only the **`name`** and **`email`** fields for all customers.
 
 
@@ -120,7 +120,7 @@ db.Customers.find({}, { name: 1, email: 1 })
 ```
 **Problem 5:**
 
-- **Prerequisite**: Understand basic WHERE clause in SQL / MongoDB's find method
+- **Prerequisite**: Understand basic MongoDB's find method
 - **Problem**: Write a query to fetch the customer with the **`id`** of 3.
 
 ```
@@ -129,7 +129,7 @@ db.Customers.find({ id: 3 });
 
 **Problem 6:**
 
-- **Prerequisite**: Understand using string patterns in SQL (LIKE clause) / using regex in MongoDB
+- **Prerequisite**: Understand  using regex in MongoDB
 - **Problem**: Write a query to fetch all customers whose **`name`** starts with 'A'.
 
 ```
@@ -137,7 +137,7 @@ db.Customers.find({ name: /^A/ });
 ```
 **Problem 7:**
 
-- **Prerequisite**: Understand how to order data in SQL / MongoDB
+- **Prerequisite**: Understand how to order  MongoDB
 - **Problem**: Write a query to fetch all customers, ordered by **`name`** in descending order.
 
 ```
@@ -145,7 +145,7 @@ db.Customers.find().sort({ name: -1 });
 ```
 **Problem 8:**
 
-- **Prerequisite**: Understand data updating in SQL / MongoDB
+- **Prerequisite**: Understand data updating  MongoDB
 - **Problem**: Write a query to update the **`address`** of the customer with **`id`** 4.
 
 ```
@@ -153,7 +153,7 @@ db.Customers.updateOne({ id: 4 }, { $set: { address: 'New Address' } });
 ```
 **Problem 9:**
 
-- **Prerequisite**: Understand how to limit results in SQL / MongoDB
+- **Prerequisite**: Understand how to limit  MongoDB
 - **Problem**: Write a query to fetch the top 3 customers when ordered by **`id`** in ascending order.
 
 ```
@@ -161,7 +161,7 @@ db.Customers.find().sort({ id: 1 }).limit(3);
 ```
 **Problem 10:**
 
-- **Prerequisite**: Understand data deletion in SQL / MongoDB
+- **Prerequisite**: Understand data deletion MongoDB
 - **Problem**: Write a query to delete the customer with **`id`** 2.
 
 ```
@@ -170,7 +170,7 @@ db.Customers.deleteOne({ id: 2 });
 
 **Problem 11:**
 
-- **Prerequisite**: Understand how to count rows / documents in SQL / MongoDB
+- **Prerequisite**: Understand how to count  MongoDB
 - **Problem**: Write a query to count the number of customers.
 
 ```
@@ -178,7 +178,7 @@ db.Customers.countDocuments();
 ```
 **Problem 12:**
 
-- **Prerequisite**: Understand how to skip rows / documents in SQL / MongoDB
+- **Prerequisite**: Understand how to skip  MongoDB
 - **Problem**: Write a query to fetch all customers except the first two when ordered by **`id`** in ascending order.
 
 ```
@@ -187,7 +187,7 @@ db.Customers.find().sort({ id: 1 }).skip(2);
 
 **Problem 13:**
 
-- **Prerequisite**: Understand filtering with multiple conditions in SQL / MongoDB
+- **Prerequisite**: Understand filtering with multiple conditions  MongoDB
 - **Problem**: Write a query to fetch all customers whose **`id`** is greater than 2 and **`name`** starts with 'B'.
 
 
@@ -196,7 +196,7 @@ db.Customers.find({ id: { $gt: 2 }, name: /^B/ });
 ```
 **Problem 14:**
 
-- **Prerequisite**: Understand how to use OR conditions in SQL / MongoDB
+- **Prerequisite**: Understand how to use OR conditions in  MongoDB
 - **Problem**: Write a query to fetch all customers whose **`id`** is less than 3 or **`name`** ends with 's'.
 
 
@@ -206,7 +206,7 @@ db.Customers.find({ $or: [{ id: { $lt: 3 } }, { name: /s$/ }] });
 ```
 **Problem 15:**
 
-- **Prerequisite**: Understand how to use NULL checks in SQL / MongoDB
+- **Prerequisite**: Understand how to use NULL checks in  MongoDB
 - **Problem**: Write a query to fetch all customers where the **`phone_number`** field is not set or is null.
 
 ```
@@ -264,7 +264,7 @@ use databasename
 
 **Problem 1:**
 
-- **Prerequisite**: Understand creating tables in SQL / collections in MongoDB
+- **Prerequisite**: Understand creating tables in SQL 
 - **Problem**: Create a **`Customers`** table / collection with the following fields: **`id`** (unique identifier), **`name`**, **`email`**, **`address`**, and **`phone_number`**.
 
 ```
@@ -281,7 +281,7 @@ CREATE TABLE Customers (
 
 **Problem 2:**
 
-- **Prerequisite**: Understand inserting data into SQL tables / MongoDB collections
+- **Prerequisite**: Understand inserting data into SQL tables 
 - **Problem**: Insert five rows / documents into the **`Customers`** table / collection with data of your choice.
 
 ```
@@ -295,7 +295,7 @@ VALUES (1, 'John Doe', 'john@example.com', '123 Main St', '1234567890'),
 ```
 **Problem 3:**
 
-- **Prerequisite**: Understand basic data fetching in SQL / MongoDB
+- **Prerequisite**: Understand basic data fetching in SQL 
 - **Problem**: Write a query to fetch all data from the **`Customers`** table / collection.
 
 ```
@@ -304,7 +304,7 @@ SELECT * FROM Customers;
 
 **Problem 4:**
 
-- **Prerequisite**: Understand how to select specific fields in SQL / MongoDB
+- **Prerequisite**: Understand how to select specific fields in SQL
 - **Problem**: Write a query to select only the **`name`** and **`email`** fields for all customers.
 
 
@@ -313,7 +313,7 @@ SELECT name, email FROM Customers;
 ```
 **Problem 5:**
 
-- **Prerequisite**: Understand basic WHERE clause in SQL / MongoDB's find method
+- **Prerequisite**: Understand basic WHERE clause in SQL  find method
 - **Problem**: Write a query to fetch the customer with the **`id`** of 3.
 
 
@@ -322,7 +322,7 @@ SELECT * FROM Customers WHERE id = 3;
 ```
 **Problem 6:**
 
-- **Prerequisite**: Understand using string patterns in SQL (LIKE clause) / using regex in MongoDB
+- **Prerequisite**: Understand using string patterns in SQL (LIKE clause) 
 - **Problem**: Write a query to fetch all customers whose **`name`** starts with 'A'.
 
 
@@ -331,7 +331,7 @@ SELECT * FROM Customers WHERE name LIKE 'A%';
 ```
 **Problem 7:**
 
-- **Prerequisite**: Understand how to order data in SQL / MongoDB
+- **Prerequisite**: Understand how to order data in SQL 
 - **Problem**: Write a query to fetch all customers, ordered by **`name`** in descending order.
 
 
@@ -340,7 +340,7 @@ SELECT * FROM Customers ORDER BY name DESC;
 ```
 **Problem 8:**
 
-- **Prerequisite**: Understand data updating in SQL / MongoDB
+- **Prerequisite**: Understand data updating in SQL 
 - **Problem**: Write a query to update the **`address`** of the customer with **`id`** 4.
 
 
@@ -349,7 +349,7 @@ UPDATE Customers SET address = 'New Address' WHERE id = 4;
 ```
 **Problem 9:**
 
-- **Prerequisite**: Understand how to limit results in SQL / MongoDB
+- **Prerequisite**: Understand how to limit results in SQL 
 - **Problem**: Write a query to fetch the top 3 customers when ordered by **`id`** in ascending order.
 
 
@@ -358,7 +358,7 @@ SELECT * FROM Customers ORDER BY id ASC LIMIT 3;
 ```
 **Problem 10:**
 
-- **Prerequisite**: Understand data deletion in SQL / MongoDB
+- **Prerequisite**: Understand data deletion in SQL
 - **Problem**: Write a query to delete the customer with **`id`** 2.
 
 ```
@@ -366,7 +366,7 @@ DELETE FROM Customers WHERE id = 2;
 ```
 **Problem 11:**
 
-- **Prerequisite**: Understand how to count rows / documents in SQL / MongoDB
+- **Prerequisite**: Understand how to count rows / documents in SQL 
 - **Problem**: Write a query to count the number of customers.
 
 
@@ -376,7 +376,7 @@ SELECT COUNT(*) FROM Customers;
 ```
 **Problem 12:**
 
-- **Prerequisite**: Understand how to skip rows / documents in SQL / MongoDB
+- **Prerequisite**: Understand how to skip rows / documents in SQL 
 - **Problem**: Write a query to fetch all customers except the first two when ordered by **`id`** in ascending order.
 
 ```
@@ -384,7 +384,7 @@ SELECT * FROM Customers ORDER BY id ASC LIMIT 18446744073709551615 OFFSET 2;
 ```
 **Problem 13:**
 
-- **Prerequisite**: Understand filtering with multiple conditions in SQL / MongoDB
+- **Prerequisite**: Understand filtering with multiple conditions in SQL 
 - **Problem**: Write a query to fetch all customers whose **`id`** is greater than 2 and **`name`** starts with 'B'.
 
 ```
@@ -392,7 +392,7 @@ SELECT * FROM Customers WHERE id > 2 AND name LIKE 'B%';
 ```
 **Problem 14:**
 
-- **Prerequisite**: Understand how to use OR conditions in SQL / MongoDB
+- **Prerequisite**: Understand how to use OR conditions in SQL 
 - **Problem**: Write a query to fetch all customers whose **`id`** is less than 3 or **`name`** ends with 's'.
 
 ```
@@ -400,7 +400,7 @@ SELECT * FROM Customers WHERE id < 3 OR name LIKE '%s';
 ```
 **Problem 15:**
 
-- **Prerequisite**: Understand how to use NULL checks in SQL / MongoDB
+- **Prerequisite**: Understand how to use NULL checks in SQL
 - **Problem**: Write a query to fetch all customers where the **`phone_number`** field is not set or is null.
 
 ```
